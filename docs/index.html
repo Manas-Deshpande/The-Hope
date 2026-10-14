@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f8f3" />
+  <title>The Hope — A little space for you</title>
+  <meta name="description" content="A gentle space to pause, reflect, and check in with yourself." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#F8F8F3",
+            sage: "#82977D",
+            forest: "#304438",
+            mist: "#E9EEE5",
+            muted: "#777F75",
+            sand: "#EFECE3"
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            serif: ["Lora", "Georgia", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-paper font-sans text-forest">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 border-b border-[#e8e9e1] bg-paper/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
+      <a href="#home" class="flex items-center gap-3" aria-label="The Hope home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 31C8 26 8 14 20 7C32 14 32 26 20 31Z" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M20 30V15M20 23C15 21 14 18 14 16M20 26C25 23 26 20 26 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="text-xl font-semibold tracking-tight">the hope<span class="text-sage">.</span></span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm text-muted md:flex">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#check-in" class="nav-link">Self-assessment</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="nav-login" class="hidden rounded-full px-4 py-2 text-sm font-medium transition hover:bg-mist sm:block">
+          Log in
+        </button>
+        <button id="nav-register" class="rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sage">
+          Get started
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:px-10 md:py-24">
+      <div class="reveal">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#dce4d7] bg-white/70 px-4 py-2 text-sm text-forest">
+          <span class="h-2 w-2 rounded-full bg-sage"></span>
+          A little space, just for you
+        </div>
+
+        <h1 class="max-w-xl font-serif text-5xl leading-[1.13] tracking-tight sm:text-6xl lg:text-7xl">
+          You don't have to have it
+          <span class="italic text-sage">all figured out.</span>
+        </h1>
+
+        <p class="mt-6 max-w-lg text-base leading-8 text-muted sm:text-lg">
+          Life can feel like a lot sometimes. Take a breath, check in with yourself, and remember that small steps count too.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#check-in" class="primary-button">
+            Take a gentle check-in
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="#about" class="text-sm font-semibold text-forest transition hover:text-sage">
+            Learn about us <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-3 text-sm text-muted">
+          <div class="flex -space-x-2" aria-hidden="true">
+            <span class="avatar avatar-one">☺</span>
+            <span class="avatar avatar-two">✿</span>
+            <span class="avatar avatar-three">☼</span>
+          </div>
+          <span>A kinder moment starts with you.</span>
+        </div>
+      </div>
+
+      <!-- Decorative illustration made with CSS -->
+      <div class="hero-art reveal" aria-label="A peaceful illustrated space with plants and a comfortable chair" role="img">
+        <div class="art-sun"></div>
+        <div class="art-window">
+          <div class="window-sun"></div>
+          <div class="window-hill hill-one"></div>
+          <div class="window-hill hill-two"></div>
+        </div>
+        <div class="art-plant plant-left">
+          <span class="plant-leaf leaf-a"></span>
+          <span class="plant-leaf leaf-b"></span>
+          <span class="plant-leaf leaf-c"></span>
+          <span class="plant-leaf leaf-d"></span>
+          <span class="plant-stem"></span>
+          <span class="plant-pot"></span>
+        </div>
+        <div class="art-chair">
+          <div class="chair-back"></div>
+          <div class="chair-seat"></div>
+          <div class="chair-leg leg-left"></div>
+          <div class="chair-leg leg-right"></div>
+          <div class="chair-person">
+            <div class="person-head"></div>
+            <div class="person-body"></div>
+            <div class="person-arm"></div>
+            <div class="person-leg"></div>
+          </div>
+        </div>
+        <div class="art-plant plant-right">
+          <span class="plant-leaf leaf-a"></span>
+          <span class="plant-leaf leaf-b"></span>
+          <span class="plant-leaf leaf-c"></span>
+          <span class="plant-stem"></span>
+          <span class="plant-pot"></span>
+        </div>
+        <div class="art-note">
+          <span class="note-icon">✳</span>
+          <span><strong>It's okay</strong><br />to take your time.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro strip -->
+    <section class="border-y border-[#e8e9e1] bg-white/60">
+      <div class="mx-auto grid max-w-7xl gap-4 px-5 py-7 text-center sm:grid-cols-3 md:px-10">
+        <p class="text-sm text-muted"><span class="mr-2 text-sage">✳</span> No pressure to be perfect</p>
+        <p class="text-sm text-muted"><span class="mr-2 text-sage">✳</span> Space to understand yourself</p>
+        <p class="text-sm text-muted"><span class="mr-2 text-sage">✳</span> One small step at a time</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow">A MOMENT FOR YOU</p>
+        <h2 class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+          You deserve a little <span class="italic text-sage">breathing room.</span>
+        </h2>
+        <p class="mt-5 leading-7 text-muted">
+          The Hope is a supportive space to pause and reflect on how you're feeling. There is no right or wrong way to feel, and you don't need to have all the answers today.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-5 md:grid-cols-3">
+        <article class="feature-card">
+          <div class="feature-icon bg-[#e8eee4]">☁</div>
+          <p class="mt-6 text-xs font-semibold tracking-[0.15em] text-sage">01 — PAUSE</p>
+          <h3 class="mt-2 font-serif text-2xl">Slow things down</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">
+            Give yourself a moment away from the noise of everyday life.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon bg-[#f0ece2]">♡</div>
+          <p class="mt-6 text-xs font-semibold tracking-[0.15em] text-sage">02 — REFLECT</p>
+          <h3 class="mt-2 font-serif text-2xl">Check in with you</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">
+            Reflect on recent feelings with a short, guided self-assessment.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon bg-[#e9e9df]">✿</div>
+          <p class="mt-6 text-xs font-semibold tracking-[0.15em] text-sage">03 — CONTINUE</p>
+          <h3 class="mt-2 font-serif text-2xl">Take a small step</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">
+            Explore a gentle suggestion to help you care for yourself today.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Self-assessment -->
+    <section id="check-in" class="px-5 pb-20 md:px-10 md:pb-28">
+      <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-mist md:grid-cols-[0.8fr_1.2fr]">
+        <div class="flex flex-col justify-center p-8 md:p-12 lg:p-16">
+          <p class="section-eyebrow">YOUR PERSONAL CHECK-IN</p>
+          <h2 class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            How have you been <span class="italic text-sage">feeling lately?</span>
+          </h2>
+          <p class="mt-5 leading-7 text-muted">
+            Take a few quiet moments to reflect on how things have felt for you recently. This is a place to check in, not to judge yourself.
+          </p>
+          <ul class="mt-7 space-y-3 text-sm text-forest">
+            <li>✓ Five simple questions</li>
+            <li>✓ A quick reflection on your responses</li>
+            <li>✓ No right or wrong answers</li>
+          </ul>
+          <p class="mt-6 text-xs leading-5 text-muted">
+            This self-assessment is for general reflection only. It is not a validated clinical screening tool or a medical diagnosis.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 md:p-10 lg:p-12">
+          <div id="assessment-start">
+            <div class="mb-6 flex items-center justify-between">
+              <span class="text-sm font-semibold">A gentle check-in</span>
+              <span class="rounded-full bg-mist px-3 py-1 text-xs text-forest">About 2 minutes</span>
+            </div>
+            <div class="rounded-2xl bg-paper p-6 md:p-8">
+              <div class="mb-5 text-3xl text-sage" aria-hidden="true">☼</div>
+              <h3 class="font-serif text-2xl">Start where you are.</h3>
+              <p class="mt-3 text-sm leading-7 text-muted">
+                Think about the past few days and choose the response that feels closest to your experience.
+              </p>
+              <button id="start-assessment" class="primary-button mt-6 w-full justify-center">
+                Begin check-in <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+
+          <form id="assessment-form" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-semibold">Your check-in</p>
+              <p id="assessment-progress" class="text-xs text-muted">5 questions</p>
+            </div>
+
+            <p class="text-xs leading-5 text-muted">
+              Over the past few days, how often have you experienced each of the following?
+            </p>
+
+            <div id="assessment-questions" class="space-y-6"></div>
+
+            <label class="block">
+              <span class="mb-2 block text-sm font-medium">Your registered email</span>
+              <input id="assessment-email" type="email" required placeholder="you@example.com" class="form-input" />
+            </label>
+
+            <button type="submit" class="primary-button w-full justify-center">
+              Submit my check-in <span aria-hidden="true">→</span>
+            </button>
+            <p id="assessment-message" class="text-sm" role="status" aria-live="polite"></p>
+            <button type="button" id="cancel-assessment" class="w-full text-sm text-muted hover:text-forest">Cancel</button>
+          </form>
+
+          <div id="assessment-result" class="hidden rounded-2xl bg-paper p-6 md:p-8" aria-live="polite">
+            <div class="text-3xl text-sage" aria-hidden="true">✿</div>
+            <h3 id="result-title" class="mt-4 font-serif text-3xl"></h3>
+            <p id="result-copy" class="mt-3 text-sm leading-7 text-muted"></p>
+            <p class="mt-4 text-xs leading-5 text-muted">
+              This result is a general reflection, not a diagnosis. If you're struggling, consider speaking with a qualified mental health professional.
+            </p>
+            <button id="retake-assessment" class="secondary-button mt-6 w-full justify-center">Take it again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support message -->
+    <section class="mx-auto max-w-4xl px-5 pb-20 text-center md:pb-28">
+      <span class="text-3xl text-sage" aria-hidden="true">“</span>
+      <blockquote class="font-serif text-3xl leading-snug sm:text-4xl">
+        You don't need to do everything today. Just take the next small step.
+      </blockquote>
+      <p class="mt-5 text-sm text-muted">A gentle reminder from The Hope</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#e8e9e1] bg-white/50">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 sm:flex-row sm:items-center sm:justify-between md:px-10">
+      <a href="#home" class="flex items-center gap-2 font-semibold">
+        <span class="text-sage">✳</span> the hope.
+      </a>
+      <p class="text-xs leading-6 text-muted">A supportive space for reflection. Not a substitute for professional mental health care.</p>
+      <p class="text-xs text-muted">Made with care ♡</p>
+    </div>
+  </footer>
+
+  <!-- Login / Registration dialog -->
+  <div id="auth-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-forest/40 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="relative w-full max-w-md rounded-3xl bg-paper p-7 shadow-xl sm:p-9">
+      <button id="close-auth" class="absolute right-5 top-4 rounded-full p-2 text-xl text-muted hover:bg-mist" aria-label="Close dialog">&times;</button>
+      <p class="section-eyebrow">WELCOME TO THE HOPE</p>
+      <h2 id="auth-title" class="mt-3 font-serif text-3xl">A little space for you.</h2>
+      <p id="auth-subtitle" class="mt-2 text-sm leading-6 text-muted">Sign in to continue your journey.</p>
+
+      <div class="mt-6 grid grid-cols-2 rounded-full bg-[#eceee7] p-1">
+        <button id="login-tab" class="auth-tab active" type="button">Log in</button>
+        <button id="register-tab" class="auth-tab" type="button">Create account</button>
+      </div>
+
+      <form id="auth-form" class="mt-6 space-y-4">
+        <label id="username-wrap" class="hidden block">
+          <span class="mb-2 block text-sm font-medium">Your name</span>
+          <input id="auth-username" type="text" autocomplete="name" placeholder="Your name" class="form-input" />
+        </label>
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">Email address</span>
+          <input id="auth-email" type="email" required autocomplete="email" placeholder="you@example.com" class="form-input" />
+        </label>
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">Password</span>
+          <input id="auth-password" type="password" required minlength="6" autocomplete="current-password" placeholder="At least 6 characters" class="form-input" />
+        </label>
+        <button id="auth-submit" type="submit" class="primary-button w-full justify-center">Log in <span aria-hidden="true">→</span></button>
+        <p id="auth-message" class="text-sm" role="status" aria-live="polite"></p>
+      </form>
+      <p class="mt-5 text-center text-xs leading-5 text-muted">Your wellbeing matters. Use a unique password for this demo.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
